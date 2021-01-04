@@ -13,6 +13,10 @@ namespace salon_essentials
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            //setup api controller
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            //load all data
+            SystemController.Instance.LoadData();
         }
     }
 }
